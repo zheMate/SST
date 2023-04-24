@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+<FilesMatch ".(gif|jpeg|png|jpg|png|ico|webp|js|css|pdf)$">
+    Header set Cache-Control "max-age=2592000"
+</FilesMatch>
