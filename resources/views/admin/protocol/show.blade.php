@@ -6,25 +6,36 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0 mr-2">{{ $protocol->title }}</h1>
-                    <a href="{{ route('admin.protocol.edit', $protocol->id) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a>
-                    <form action="{{ route('admin.protocol.delete', $protocol->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="border-0 bg-transparent">
-                            <i class="fas fa-trash-alt text-danger" role="button"></i>
-                        </button>
-                    </form>
-                    <form action="{{ route('admin.protocol.view_pdf', $protocol->id) }}" method="post" >
-                        @csrf
-                        <button type="submit" class="btn btn-info"><i class="fas fa-file-pdf"></i> Предпросмотр PDF</button>
-                    </form>
-                    <form action="{{ route('admin.protocol.export_to_pdf', $protocol->id) }}" method="post" >
-                        @csrf
-                        <button type="submit" class="btn bg-purple"><i class="fas fa-file-pdf"></i> Скачать PDF</button>
-                    </form>
-
+                <div class="col-sm-6 d-flex  flex-column">
+                    <div class="col-sm-6 d-flex align-items-center">
+                        <h1 class="m-0 mr-2">{{ $protocol->title }}</h1>
+                        <a href="{{ route('admin.protocol.edit', $protocol->id) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a>
+                        <form action="{{ route('admin.protocol.delete', $protocol->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="border-0 bg-transparent">
+                                <i class="fas fa-trash-alt text-danger" role="button"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="p-1">
+                                <form action="{{ route('admin.protocol.view_pdf', $protocol->id) }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn btn-info"><i class="fas fa-file-pdf"></i> Предпросмотр PDF</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="p-1">
+                                <form action="{{ route('admin.protocol.export_to_pdf', $protocol->id) }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn bg-purple"><i class="fas fa-file-pdf"></i> Скачать PDF</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
