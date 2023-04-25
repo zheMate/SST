@@ -56,6 +56,17 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/', [App\Http\Controllers\Admin\Main\IndexController::class, '__invoke'])->name('admin.main.index');
     });
+    Route::group(['namespace' => 'Protocol', 'prefix' => 'protocols'], function () {
+        Route::get('/', [App\Http\Controllers\Admin\Protocol\IndexController::class, '__invoke'])->name('admin.protocol.index');
+        Route::get('/create', [App\Http\Controllers\Admin\Protocol\CreateController::class, '__invoke'])->name('admin.protocol.create');
+        Route::post('/{protocol}/view_pdf', [App\Http\Controllers\Admin\Protocol\ViewPdfController::class, '__invoke'])->name('admin.protocol.view_pdf');
+        Route::post('/{protocol}/export_to_pdf', [App\Http\Controllers\Admin\Protocol\ExportToPdfController::class, '__invoke'])->name('admin.protocol.export_to_pdf');
+        Route::post('/', [App\Http\Controllers\Admin\Protocol\StoreController::class, '__invoke'])->name('admin.protocol.store');
+        Route::get('/{protocol}', [App\Http\Controllers\Admin\Protocol\ShowController::class, '__invoke'])->name('admin.protocol.show');
+        Route::get('/{protocol}/edit', [App\Http\Controllers\Admin\Protocol\EditController::class, '__invoke'])->name('admin.protocol.edit');
+        Route::patch('/{protocol}', [App\Http\Controllers\Admin\Protocol\UpdateController::class, '__invoke'])->name('admin.protocol.update');
+        Route::delete('/{protocol}', [App\Http\Controllers\Admin\Protocol\DeleteController::class, '__invoke'])->name('admin.protocol.delete');
+    });
     Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function () {
         Route::get('/', [App\Http\Controllers\Admin\Post\IndexController::class, '__invoke'])->name('admin.post.index');
         Route::get('/create', [App\Http\Controllers\Admin\Post\CreateController::class, '__invoke'])->name('admin.post.create');

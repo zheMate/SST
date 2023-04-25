@@ -49,6 +49,10 @@
                                             <td>Имя</td>
                                             <td>{{ $user->name }}</td>
                                         </tr>
+                                        <tr>
+                                            <td>Группа</td>
+                                            <td>{{ $user->group_name }}</td>
+                                        </tr>
 
                                     </tbody>
                                 </table>

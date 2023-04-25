@@ -52,7 +52,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'group_name' => ['required', 'string', 'max:255'],
+            'group_name' => ['required', 'string', 'max:255', 'between:7,8'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ],
         [
@@ -60,6 +60,7 @@ class RegisterController extends Controller
             'name.string' => 'Только алфавит кириллицы или латиницы',
             'group_name.required' => 'Это поле необходимо для заполнения',
             'group_name.string' => 'Группа в формате XX-XX-XX',
+            'group_name.between' => 'Пример XX-XX-XX или XXX-XX-XX,  :min - :max символов.',
             'email.required' => 'Это поле необходимо для заполнения',
             'email.string' => 'Почта должна быть строкой',
             'email.email' => 'Ваша почта должна соответствовать формату mail@some.domain',
