@@ -1,4 +1,9 @@
 $(window).load(function(){
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend", () => {
+        loader.style.display = "none";
+    })
     var height = window.innerHeight,
         x= 0, y= height/2,
         curveX = 10,
@@ -67,12 +72,6 @@ $(window).load(function(){
 
         var anchorDistance = 200;
         var curviness = anchorDistance - 40;
-
-
-
-
-
-
 
         if (curveY <= 140 || curveY >= 900) {
         curveY-10

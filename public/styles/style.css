@@ -107,6 +107,7 @@ ul {
 
 ul li {
     color: #5F6368;
+    fill: #5F6368;
     font-family: sans-serif;
     padding: 20px 0;
 }
@@ -175,15 +176,12 @@ header .name a .subname {
     transition: 0.5s ease-in-out;
 }
 
-.menu-inner .left-menu .puncts-active .img-menu-active {
-    color: var(--color);
-}
 
 .menu-inner .left-menu .puncts a,
 .menu-inner .left-menu .puncts input {
     width: 200px;
     height: 75px;
-    font-size: 15px;
+    font-size: 1em;
     text-decoration: none;
     color: inherit;
     display: block;
@@ -199,14 +197,26 @@ header .name a .subname {
 
 }
 
+
 .menu-inner .left-menu .puncts a .img-menu {
     margin-left: 35px;
     padding-top: 25px;
-    width: 25px;
+    width: 2em;
     float: left;
     margin-right: 30px;
-
+    fill: inherit;
 }
+
+
+.puncts form .img-menu {
+    width: 3em;
+}
+
+.menu-inner .left-menu .puncts-active .img-menu-active {
+    color: var(--color);
+}
+
+
 
 .menu-inner .left-menu .puncts a .name {
     display: table-cell;
@@ -241,11 +251,12 @@ header .name a .subname {
     clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
 }
 
-.menu-inner .left-menu .puncts:hover {
 
+.menu-inner .left-menu .puncts:hover {
     color: var(--color);
     border-radius: 0px 10px 10px 0px;
     text-decoration: underline;
+    fill: var(--color);
 }
 
 
@@ -319,10 +330,49 @@ a {
     background: transparent;
     border: 0;
     color: inherit;
+    display: flex;
+
 }
 
-.card__footer form button i {
-    font-size: 24px;
+.like__wrapper {
+    width: 2em;
+    fill: currentColor;
+}
+
+.guest__footer {
+    display: flex;
+    gap: 0.3em;
+    font-size: 1em;
+}
+
+.single__show {
+    display: flex;
+    gap: 0.3em;
+    font-size: 1.5em;
+}
+
+.single__show .mark__like .like__wrapper {
+    width: 1em;
+}
+
+.single__show__like {
+    display: flex;
+    gap: 0.3em;
+    font-size: 1.5em;
+}
+
+.single__show__like .mark__like .like__wrapper {
+    width: 2em;
+}
+.single__show__like .mark__like {
+    padding: 0.3em 0.5em 0.1em 0.5em;
+}
+
+
+.guest__footer .like__wrapper {
+    width: 1em;
+    fill: currentColor;
+
 }
 
 .card__footer .guest__footer {
@@ -330,7 +380,7 @@ a {
 }
 
 .mark__like {
-    padding: 10px 3px 3px 5px;
+    padding: 0.1em 0.5em;
 }
 
 .guest__footer .mark__like {
@@ -338,9 +388,8 @@ a {
 }
 
 .single__feedback form i,
-.like__counter,
-.guest__footer {
-    font-size: 24px;
+.like__counter {
+    font-size: 1.2em;
 
 }
 
@@ -456,12 +505,10 @@ a {
 
 .pagination nav {
     padding-top: 6em;
-
     display: flex;
     justify-items: center;
     justify-content: center;
     gap: 20px;
-
     list-style: none;
 }
 
@@ -470,7 +517,12 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.pagination nav a {
+    text-decoration: none;
 }
 
 .pagination nav .previous-link {
@@ -478,7 +530,8 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 .pagination nav .next-link-disable {
@@ -486,7 +539,8 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 .pagination nav .next-link {
@@ -494,17 +548,23 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 .pagination nav .page-item {
     background: transparent;
     border-radius: 0.3rem;
     border: 1px solid #5F6368;
-    padding: 5px;
+    padding: 10px;
     width: 30px;
+
     text-align: center;
     transition: 0.2s ease-in-out;
+}
+
+.pagination nav .page-item .page-link {
+    text-decoration: none;
 }
 
 .pagination nav .page-item:hover {
@@ -512,7 +572,7 @@ a {
     border-radius: 0.3rem;
     color: #F8F9FA;
 
-    padding: 5px;
+    padding: 10px;
 }
 
 
@@ -522,7 +582,7 @@ a {
     border-radius: 0.3rem;
     color: #F8F9FA;
     border: none;
-    padding: 5px;
+    padding: 10px;
 }
 
 
@@ -648,6 +708,12 @@ mark {
 }
 
 .like {
+    border: 0;
+    background: transparent;
+    color: black;
+}
+
+.single__show__like {
     border: 0;
     background: transparent;
     color: black;
@@ -817,6 +883,7 @@ mark {
     text-align: center;
     color: var(--color);
 }
+
 .comment-text {
     background-color: #E79E71;
     padding: 1rem;
@@ -873,17 +940,22 @@ mark {
     flex-direction: column;
 
 }
-.date__of__enter{
+
+.date__of__enter {
     font-size: 0.8em;
     color: white;
 }
-.comment__message{
+
+.comment__message {
     display: flex;
     align-items: center;
     gap: 20px;
     background-color: white;
     padding: 1rem;
+}
 
+.comment__message .message__icon__wrapper {
+    width: 1.5em;
 }
 
 
@@ -910,26 +982,64 @@ mark {
     position: relative;
 }
 
+/* Заглушка на момент загрузки DOM \/ */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    overflow-y: hidden;
+    transition: 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: var(--color);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 
 /* Подвал \/ */
 
-.footer__company {}
+
 
 footer {
     width: 100%;
     background-color: #FFFFFF;
-
 }
 
-.footer__block {
 
+.footer__block {
     padding: 5rem;
     margin: 5% auto;
     width: 60%;
     display: flex;
     flex-direction: column;
-
-
 }
 
 .footer__items {
@@ -961,20 +1071,44 @@ footer {
 
 }
 
+
+
 .footer__column-header {
     margin: 0;
 }
 
-.fa-vk {
-    padding-right: 5px;
-}
 
-.vk__links {
+
+.name,
+header .name {
     transition: 0.5s ease-in-out;
 }
 
-.vk__links:hover {
+.name:hover {
     color: var(--color);
+}
+
+
+.feedback__links {
+    transition: 0.5s ease-in-out;
+    display: flex;
+    gap: 0.5em;
+}
+.credentials{
+    display: flex;
+    gap: 0.5em;
+}
+.credentials .socials__svg{
+    width: 1em;
+}
+
+.feedback__links .socials__svg{
+    width: 1.5em;
+}
+
+.feedback__links:hover {
+    color: var(--color);
+    fill: currentColor;
 }
 
 .footer-socials p {
