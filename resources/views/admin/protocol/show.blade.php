@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="p-1">
-                                <form action="{{ route('admin.protocol.view_pdf', $protocol->id) }}" method="post">
+                                <form action="{{ route('admin.protocol.view_pdf', $protocol->id) }}" method="post" target="__blank">
                                     @csrf
                                     <button type="submit" class="btn btn-info"><i class="fas fa-file-pdf"></i> Предпросмотр PDF</button>
                                 </form>
