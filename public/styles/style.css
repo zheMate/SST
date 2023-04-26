@@ -201,7 +201,7 @@ header .name a .subname {
 .menu-inner .left-menu .puncts a .img-menu {
     margin-left: 35px;
     padding-top: 25px;
-    width: 2em;
+    width: 1em;
     float: left;
     margin-right: 30px;
     fill: inherit;
@@ -209,7 +209,7 @@ header .name a .subname {
 
 
 .puncts form .img-menu {
-    width: 3em;
+    width: 1.5em;
 }
 
 .menu-inner .left-menu .puncts-active .img-menu-active {
@@ -364,6 +364,7 @@ a {
 .single__show__like .mark__like .like__wrapper {
     width: 2em;
 }
+
 .single__show__like .mark__like {
     padding: 0.3em 0.5em 0.1em 0.5em;
 }
@@ -380,7 +381,7 @@ a {
 }
 
 .mark__like {
-    padding: 0.1em 0.5em;
+    padding: 0 0.8em;
 }
 
 .guest__footer .mark__like {
@@ -517,7 +518,7 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -530,7 +531,7 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -539,7 +540,7 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -548,7 +549,7 @@ a {
     border-radius: 0.3rem;
     width: 60px;
     color: #F8F9FA;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -556,7 +557,7 @@ a {
     background: transparent;
     border-radius: 0.3rem;
     border: 1px solid #5F6368;
-    padding: 10px;
+    padding: 5px;
     width: 30px;
 
     text-align: center;
@@ -572,17 +573,21 @@ a {
     border-radius: 0.3rem;
     color: #F8F9FA;
 
-    padding: 10px;
+    padding: 5px;
 }
 
-
+.pagination nav .page-item .page-link{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
 .pagination nav .active {
     background: var(--color);
     border-radius: 0.3rem;
     color: #F8F9FA;
     border: none;
-    padding: 10px;
+    padding: 5px;
 }
 
 
@@ -867,8 +872,6 @@ mark {
 
 /* Комментарии \/ */
 
-
-
 .comment-section {
     display: flex;
     flex-direction: column;
@@ -898,9 +901,7 @@ mark {
     resize: vertical;
     min-height: 126px;
     background-color: #E79E71;
-
     padding: 1em;
-
     border: 2px solid transparent;
     outline: none;
     font-weight: 500;
@@ -912,10 +913,6 @@ mark {
 .comm-textarea::placeholder {
     color: rgba(255, 255, 255, 0.653);
 }
-
-
-
-
 
 .comm-textarea:focus {
     cursor: text;
@@ -958,21 +955,14 @@ mark {
     width: 1.5em;
 }
 
-
-
 /* Страница категорий \/ */
-
-
-
 
 .categories__page {
     display: flex;
     flex-direction: column;
     padding-top: 6em;
     padding-left: 12.5em;
-
 }
-
 .category__title {
     font-size: 1.2em;
     height: 3em;
@@ -1025,15 +1015,10 @@ mark {
 
 
 /* Подвал \/ */
-
-
-
 footer {
     width: 100%;
     background-color: #FFFFFF;
 }
-
-
 .footer__block {
     padding: 5rem;
     margin: 5% auto;
@@ -1041,14 +1026,11 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
 .footer__items {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
 }
-
-
 .footer__rights {
     width: 100%;
     height: 5px;
@@ -1056,61 +1038,46 @@ footer {
     margin-bottom: 5rem;
     background-color: #DADCE0;
 }
-
 .rights__text {
     display: flex;
     justify-content: center;
     padding: 10px;
     align-items: center;
 }
-
 .footer-socials {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-
 }
-
-
-
 .footer__column-header {
     margin: 0;
 }
-
-
-
 .name,
 header .name {
     transition: 0.5s ease-in-out;
 }
-
 .name:hover {
     color: var(--color);
 }
-
-
 .feedback__links {
     transition: 0.5s ease-in-out;
     display: flex;
     gap: 0.5em;
 }
-.credentials{
+.credentials {
     display: flex;
     gap: 0.5em;
 }
-.credentials .socials__svg{
+.credentials .socials__svg {
     width: 1em;
 }
-
-.feedback__links .socials__svg{
+.feedback__links .socials__svg {
     width: 1.5em;
 }
-
 .feedback__links:hover {
     color: var(--color);
     fill: currentColor;
 }
-
 .footer-socials p {
     margin: 0;
 }
