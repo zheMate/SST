@@ -53,6 +53,10 @@
                                             <td>Группа</td>
                                             <td>{{ $user->group_name }}</td>
                                         </tr>
+                                        <tr>
+                                            <td>Должность</td>
+                                            <td>{{ $user->job_title }}</td>
+                                        </tr>
 
                                     </tbody>
                                 </table>

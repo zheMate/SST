@@ -56,7 +56,7 @@
                                 <select class="select2" name="user_ids[]" multiple="multiple" data-placeholder="Выберите участников"
                                         style="width: 100%;">
                                     @foreach($users as $user)
-                                        <option {{ is_array($protocol->users->pluck('id')->toArray()) && in_array($user->id, $protocol->users->pluck('id')->toArray()) ? ' selected' : '' }} value="{{ $user->id }}">{{ $user->name  }} - {{ $user->group_name }}</option>
+                                        <option {{ is_array($protocol->users->pluck('id')->toArray()) && in_array($user->id, $protocol->users->pluck('id')->toArray()) ? ' selected' : '' }} value="{{ $user->id }}">{{ $user->name  }} ({{ $user->group_name }}) - {{ $user->job_title }}</option>
                                     @endforeach
                                 </select>
 

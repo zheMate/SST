@@ -59,6 +59,16 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="jobTitle">Должность</label>
+                                <input type="text" class="form-control" name="job_title" id="jobTitle" placeholder="Название должности">
+                                @error('job_title')
+                                <div class="text-danger">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
                                 <label>Выберите роль пользователя</label>
                                 <select class="form-control" name="role">
                                     @foreach($roles as $id => $role)

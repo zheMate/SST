@@ -27,6 +27,7 @@ class UpdateRequest extends FormRequest
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users,email,' . $this->user_id,
             'group_name' => 'required|string',
+            'job_title' => 'required|string',
             'user_id' => 'required|integer|exists:users,id',
             'role' => 'required|string',
         ];
@@ -38,6 +39,8 @@ class UpdateRequest extends FormRequest
             'name.string' => 'Только алфавит кириллицы или латиницы',
             'group_name.required' => 'Это поле необходимо для заполнения',
             'group_name.string' => 'Группа в формате XX-XX-XX',
+            'job_title.required' => 'Это поле необходимо для заполнения',
+            'job_title.string' => 'Н.р: Руководитель тьюторского корпуса',
             'email.required' => 'Это поле необходимо для заполнения',
             'email.string' => 'Почта должна быть строкой',
             'email.email' => 'Ваша почта должна соответствовать формату mail@some.domain',

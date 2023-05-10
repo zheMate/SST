@@ -55,7 +55,7 @@
                                 <select class="select2" name="user_ids[]" multiple="multiple" data-placeholder="Выберите участников"
                                         style="width: 100%;">
                                     @foreach($users as $user)
-                                        <option {{ is_array(old('user_ids')) && in_array($user->id, old('user_ids')) ? ' selected' : '' }} value="{{ $user->id }}">{{ $user->name  }} - {{ $user->group_name }}</option>
+                                        <option {{ is_array(old('user_ids')) && in_array($user->id, old('user_ids')) ? ' selected' : '' }} value="{{ $user->id }}">{{ $user->name  }} ({{ $user->group_name }}) - {{ $user->job_title }}</option>
                                     @endforeach
                                 </select>
 

@@ -72,7 +72,7 @@
                                     </tr>
                                     <tr>
                                         <td>Дата проведения собрания</td>
-                                        <td>{{ $parsedDateOfMeeting->day }} {{ $parsedDateOfMeeting->translatedFormat('F') }} {{ $parsedDateOfMeeting->year }}</td>
+                                        <td>{{ $parsedDateOfMeeting->day }} {{ $parsedDateOfMeeting->getTranslatedMonthName('Do MMMM') }} {{ $parsedDateOfMeeting->year }}</td>
                                     </tr>
                                     <tr>
                                         <td>Присутствовали</td>
@@ -94,7 +94,7 @@
                                     </tr>
                                     <tr>
                                         <td>Дата проведения следующего собрания</td>
-                                        <td>{{ $parsedDateOfNextMeeting->day }} {{ $parsedDateOfNextMeeting->translatedFormat('F') }} {{ $parsedDateOfNextMeeting->year }}</td>
+                                        <td>{{ $parsedDateOfNextMeeting->day }} {{ $parsedDateOfNextMeeting->getTranslatedMonthName('Do MMMM') }} {{ $parsedDateOfNextMeeting->year }}</td>
                                     </tr>
                                 </tbody>
                             </table>

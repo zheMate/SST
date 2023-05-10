@@ -22,7 +22,7 @@
                 <mark>{{ $post->title }}</mark>
             </h1>
             <p id="date">
-                <mark>Дата публикации: {{ $date->translatedFormat('F') }} {{ $date->day }}
+                <mark>Дата публикации: {{ $date->day }} {{ $date->getTranslatedMonthName('Do MMMM') }}
                     , {{ $date->year }} {{$date->format('H:i')}}</mark>
                 <br>
 
