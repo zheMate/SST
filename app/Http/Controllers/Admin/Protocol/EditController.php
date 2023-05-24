@@ -10,7 +10,7 @@ class EditController extends BaseController
 {
     public function __invoke(Protocol $protocol)
     {
-        $users = User::all();
+        $users = User::all()->where('job_title', '<>', 'Нет должности');
         return view('admin.protocol.edit', compact('protocol', 'users'));
     }
 }

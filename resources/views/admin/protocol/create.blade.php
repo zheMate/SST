@@ -33,7 +33,7 @@
                             <div class="form-group w-25">
                                 <label for="inputName">Название</label>
                                 <input type="text" class="form-control" name="title" id="inputName"
-                                       placeholder="Название поста" value="{{ old('title') }}">
+                                       placeholder="Название протокола" value="{{ old('title') }}">
                                 @error('title')
                                 <div class="text-danger">
                                     {{ $message }}

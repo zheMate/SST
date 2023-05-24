@@ -103,7 +103,7 @@
         @endif
 
         @guest()
-        <p>Чтобы оставить свой комментарий, <a href="{{ route('personal.main.index') }}"> авторизуйиесь
+        <p>Чтобы оставить свой комментарий, <a href="{{ route('personal.main.index') }}"> авторизуйтесь
                 !</a></p>
 
         @endguest
