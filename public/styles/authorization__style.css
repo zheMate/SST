@@ -301,3 +301,8 @@ html {
     max-width: 2em;
     fill: var(--secondary-color);
 }
+
+.alternative__logo{
+    width: 80px;
+    
+}

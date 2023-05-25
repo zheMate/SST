@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="header-container spacer layer">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <img class="alternative__logo" src="{{ asset('image/logo_white.svg') }}" alt="Логотип КГАПОУ Пермский Авиационный техникум им. А.Д. Швецова" > 
                 </a>
 
 
