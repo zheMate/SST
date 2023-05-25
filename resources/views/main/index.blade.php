@@ -30,7 +30,7 @@
     </div>
     <div class="news">
         <div class="info">
-            <h1>Рандомный порядок</h1>
+            <h1>Рекомендации</h1>
         </div>
         <section class="cards-wrapper">
             @foreach($randomPosts as $post)
@@ -52,7 +52,7 @@
     </div>
     <div class="news">
         <div class="info">
-            <h1>Топ постов От самого залайконного</h1>
+            <h1>Популярное сейчас</h1>
         </div>
         <section class="cards-wrapper">
             @foreach($likedPosts as $post)
